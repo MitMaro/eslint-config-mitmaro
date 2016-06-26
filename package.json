@@ -1,0 +1,27 @@
+{
+  "name": "eslint-config-mitmaro",
+  "version": "1.0.0",
+  "description": "MitMaro's ESLint configurations",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint . && node mocha.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitmaro/eslint-config-mitmaro.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Tim Oram <mitmaro@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitmaro/eslint-config-mitmaro/issues"
+  },
+  "homepage": "https://github.com/mitmaro/eslint-config-mitmaro#readme",
+  "devDependencies": {
+    "eslint": "^2.13.1",
+    "eslint-plugin-strict-newline": "^1.0.0"
+  }
+}

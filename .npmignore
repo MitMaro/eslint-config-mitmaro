@@ -1,4 +1,5 @@
+.idea
 .eslintrc
-eslint-config-mitmaro-*.tgz
 .travis.yml
+eslint-config-mitmaro-*.tgz
 style.js

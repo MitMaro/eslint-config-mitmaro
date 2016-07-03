@@ -8,7 +8,10 @@ module.exports = {
 			'always'
 		],
 		'no-console': 'error',
-		'no-constant-condition': 'error',
+		'no-constant-condition': [
+			'error',
+			{ checkLoops: false }
+		],
 		'no-control-regex': 'error',
 		'no-debugger': 'error',
 		'no-dupe-args': 'error',

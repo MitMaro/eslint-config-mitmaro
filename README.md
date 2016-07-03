@@ -24,6 +24,12 @@ An extension of `eslint-config-mitmaro` that adds support for mocha.
 1. `npm install --save-dev eslint-config-mitmaro eslint-plugin-strict-newline eslint`
 2. add `"extends": "mitmaro/mocha"` to your `.eslintrc`
 
+## Versioning
+
+This project follows as closely as possible [Semantic Versioning](http://semver.org/). A MAJOR change would be caused
+by including a rule that could cause a passing code base to fail. A MINOR change is a modification or removal of a rule
+that would not cause existing passing code to fail. A PATCH would be any fix that doesn't cause any changes to rules. 
+
 ## Contributing
 
 Add new rule definitions under the files located in `rules` ensuring to keep the rule correctly categorized and in the

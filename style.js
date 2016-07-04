@@ -23,3 +23,7 @@ const nestedSingleObject = {
 		bar3: 'bar'
 	}
 };
+
+while (true) {
+	break;
+}

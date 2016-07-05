@@ -6,6 +6,7 @@ The format conforms to [Keep a Changelog](http://keepachangelog.com/).
 ## [Unreleased]
 ### Changed
 - Set `checkLoops` to `false` for rule `no-constant-condition`
+- Set `nestedBinaryExpressions` for rule `no-extra-parens`
 
 ## 1.0.0 - 2016-06-25
 ### Added

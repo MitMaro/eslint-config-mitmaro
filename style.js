@@ -27,3 +27,7 @@ const nestedSingleObject = {
 while (true) {
 	break;
 }
+
+const parensFoo = true;
+const parensBar = false;
+const parensBool = (parensFoo && parensBar) || parensFoo;

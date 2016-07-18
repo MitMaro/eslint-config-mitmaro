@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/mitmaro/eslint-config-mitmaro#readme",
   "devDependencies": {
-    "eslint": "^2.13.1",
+    "eslint": "^3.1.0",
     "eslint-plugin-strict-newline": "^1.0.0"
   }
 }

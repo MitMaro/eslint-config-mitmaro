@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-mitmaro",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "MitMaro's ESLint configurations",
   "main": "index.js",
   "scripts": {

@@ -1,5 +1,6 @@
 # eslint-config-mitmaro
 
+[![NPM version](https://img.shields.io/npm/v/eslint-config-mitmaro.svg)](https://www.npmjs.com/package/eslint-config-mitmaro)
 [![Dependency Status](https://david-dm.org/MitMaro/eslint-config-mitmaro.svg)](https://david-dm.org/MitMaro/eslint-config-mitmaro)
 [![Build Status](https://travis-ci.org/MitMaro/eslint-config-mitmaro.svg?branch=master)](https://travis-ci.org/MitMaro/eslint-config-mitmaro)
 [![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)](https://raw.githubusercontent.com/MitMaro/eslint-config-mitmaro/master/LICENSE)
@@ -16,7 +17,7 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+. It
 
 1. `npm install --save-dev eslint-config-mitmaro eslint-plugin-strict-newline eslint`
 2. add `"extends": "mitmaro"` to your `.eslintrc`
-	
+
 ### eslint-config-mitmaro/mocha
 
 An extension of `eslint-config-mitmaro` that adds support for mocha.

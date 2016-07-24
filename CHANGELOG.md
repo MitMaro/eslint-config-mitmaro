@@ -3,8 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 The format conforms to [Keep a Changelog](http://keepachangelog.com/).
 
-## [Unreleased]
+## [2.0.0] - 2016-07-24
 ### Changed
+- Updated to support ESLint 3
 - Set `checkLoops` to `false` for rule `no-constant-condition`
 - Set `nestedBinaryExpressions` for rule `no-extra-parens`
 
@@ -12,4 +13,4 @@ The format conforms to [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - Initial rule set
 
-[Unreleased]: https://github.com/MitMaro/eslint-config-mitmaro/compare/v1.0.0...HEAD
+[2.0.0]: https://github.com/MitMaro/eslint-config-mitmaro/compare/v1.0.0...2.0.0

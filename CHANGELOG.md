@@ -13,4 +13,4 @@ The format conforms to [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - Initial rule set
 
-[2.0.0]: https://github.com/MitMaro/eslint-config-mitmaro/compare/v1.0.0...2.0.0
+[2.0.0]: https://github.com/MitMaro/eslint-config-mitmaro/compare/v1.0.0...v2.0.0

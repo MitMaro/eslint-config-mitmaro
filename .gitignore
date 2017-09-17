@@ -1,2 +1,6 @@
 node_modules
 eslint-config-mitmaro-*.tgz
+npm-debug.log
+npm-debug.log*
+package-lock.json
+yarn.lock

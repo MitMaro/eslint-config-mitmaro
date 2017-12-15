@@ -2,15 +2,17 @@
 
 module.exports = {
 	rules: {
-		'comma-dangle': 'error',
-		'no-cond-assign': [
-			'error',
-			'always'
-		],
+		'for-direction': 'error',
+		'getter-return': 'error',
+		'no-await-in-loop': 'off',
+		'no-compare-neg-zero': 'error',
+		'no-cond-assign': 'error',
 		'no-console': 'error',
 		'no-constant-condition': [
 			'error',
-			{ checkLoops: false }
+			{
+				checkLoops: false,
+			},
 		],
 		'no-control-regex': 'error',
 		'no-debugger': 'error',
@@ -24,29 +26,27 @@ module.exports = {
 		'no-extra-parens': [
 			'error',
 			'all',
-			{ nestedBinaryExpressions: false }
+			{
+				nestedBinaryExpressions: false,
+				ignoreJSX: 'multi-line',
+			},
 		],
 		'no-extra-semi': 'error',
 		'no-func-assign': 'error',
-		'no-inner-declarations': [
-			'error',
-			'both'
-		],
+		'no-inner-declarations': 'error',
 		'no-invalid-regexp': 'error',
 		'no-irregular-whitespace': 'error',
-		'no-negated-in-lhs': 'error',
 		'no-obj-calls': 'error',
-		'no-prototype-builtins': 'error',
+		'no-prototype-builtins': 'off',
 		'no-regex-spaces': 'error',
 		'no-sparse-arrays': 'error',
+		'no-template-curly-in-string': 'error',
 		'no-unexpected-multiline': 'error',
 		'no-unreachable': 'error',
 		'no-unsafe-finally': 'error',
+		'no-unsafe-negation': 'error',
 		'use-isnan': 'error',
-		'valid-jsdoc': [
-			'error',
-			{ requireReturn: false }
-		],
-		'valid-typeof': 'error'
-	}
+		'valid-jsdoc': 'warn',
+		'valid-typeof': 'error',
+	},
 };

@@ -1,10 +1,15 @@
 {
   "name": "eslint-config-mitmaro",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "MitMaro's ESLint configurations",
-  "main": "index.js",
+  "main": "config/common.js",
+  "files": [
+    "config",
+    "rules"
+  ],
   "scripts": {
-    "test": "eslint . && node mocha.js"
+    "eslint": "eslint .",
+    "test": "eslint . && scripts/test.bash"
   },
   "repository": {
     "type": "git",
@@ -14,14 +19,25 @@
     "eslint",
     "eslintconfig"
   ],
-  "author": "Tim Oram <mitmaro@gmail.com>",
+  "author": "Tim Oram <me@mitmaro.ca>",
+  "contributors": [
+    "Tim Oram <me@mitmaro.ca>"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mitmaro/eslint-config-mitmaro/issues"
   },
   "homepage": "https://github.com/mitmaro/eslint-config-mitmaro#readme",
   "devDependencies": {
-    "eslint": "^3.1.0",
-    "eslint-plugin-strict-newline": "^1.0.0"
+    "@mitmaro/build-scripts": "^0.1.5",
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.13.1",
+    "eslint-find-rules": "^3.1.1",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-filenames": "^1.2.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-security": "^1.4.0"
   }
 }

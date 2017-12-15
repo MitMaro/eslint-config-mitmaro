@@ -6,7 +6,7 @@ module.exports = {
 		'arrow-parens': 'error',
 		'arrow-spacing': 'error',
 		'constructor-super': 'error',
-		'generator-star-spacing': ['error', 'before'],
+		'generator-star-spacing': 'error',
 		'no-class-assign': 'error',
 		'no-confusing-arrow': 'error',
 		'no-const-assign': 'error',
@@ -22,14 +22,16 @@ module.exports = {
 		'object-shorthand': 'error',
 		'prefer-arrow-callback': 'error',
 		'prefer-const': 'error',
-		'prefer-reflect': 'error',
+		'prefer-destructuring': 'off',
+		'prefer-numeric-literals': 'off',
 		'prefer-rest-params': 'error',
 		'prefer-spread': 'error',
 		'prefer-template': 'error',
 		'require-yield': 'error',
 		'rest-spread-spacing': 'error',
-		'sort-imports': 'error',
+		'sort-imports': 'off', // this rule doesn't match how I sort imports
+		'symbol-description': 'error',
 		'template-curly-spacing': 'error',
-		'yield-star-spacing': 'error'
-	}
+		'yield-star-spacing': 'error',
+	},
 };

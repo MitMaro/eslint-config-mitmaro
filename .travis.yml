@@ -3,6 +3,7 @@ language: node_js
 branches:
   only:
   - master
+  - "/^v\\d+\\.\\d+\\.\\d+$/"
 node_js:
   - '6'
   - '8'
@@ -15,3 +16,4 @@ deploy:
   on:
     tags: true
     repo: MitMaro/eslint-config-mitmaro
+    node: '8'

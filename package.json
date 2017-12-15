@@ -32,6 +32,7 @@
     "@mitmaro/build-scripts": "^0.1.5",
     "babel-eslint": "^8.0.3",
     "eslint": "^4.13.1",
+    "eslint-config-mitmaro": "^3.0.0",
     "eslint-find-rules": "^3.1.1",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-filenames": "^1.2.0",

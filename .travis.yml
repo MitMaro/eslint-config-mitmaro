@@ -1,19 +1,36 @@
 sudo: false
+notifications:
+  email:
+    on_success: never
+    on_failure: always
 language: node_js
 branches:
   only:
   - master
-  - "/^v\\d+\\.\\d+\\.\\d+$/"
-node_js:
-  - '6'
-  - '8'
-script: npm run test
-deploy:
-  provider: npm
-  email: mitmaro@gmail.com
-  api_key:
-    secure: "oAbOPzOhUwqV43YhZf95laNzTc25zf16E6t2wkWMltWj+Zu085gBBcvTuZvzH/TlCczAaUJd9ElYZCAxg9BjgGvN0YwttZY6xW+uhKG443LQ/KJBMYuJk3F4REa5IbGMCOsmfQP+fi1HF7GoX4JELQ3cz6Qvj24yjYfpzkUDHFHGimCQp/Q1WVd8hEXH703JnMIue2ZkIaU3yPLfWYAqImVgAEcfS06vniWDTQn9O0gRfzrKUSjl9B1vZLBGq/++VXVtT0/JUn6giCKU0oMvQeBqFENb5PIBlMi98abMzbbsgoLu66CWSYmWxtA9cVuDfa8e5ktFW+LqEQdWIV4v9BCeV1hFbiW1iJdbJoEhOO81K51q5+wLqUaceUcKJ6l8GbbE/2s92GpKtGDDihlJ/b6cnp9acKvkw6+6GysF8v5s12WeZXIStcvl2X8sRVmaE40DXW5Kf09BCBeDuKUJ9tdDe3wEU4Kt+/OzwF9o4jti/UHTBo6HVBM7l76biwJhEM+HdQscz1AFhf8Ek0ITDdUQJIenJxMNvQvYUMJzQNnhJKpI/IoRpS8/dZqVs3kudezFQUGoBVd/A3knOpcuQFCKdQ5YzXeML8Cheydz4CxAn5E7FerHpaqhVNqedSAaIdsKHivCIcJQrNIszDfvbbxBSmCoG6lzEasjiMVC5i8="
-  on:
-    tags: true
-    repo: MitMaro/eslint-config-mitmaro
-    node: '8'
+  - /^v\d+\.\d+\.\d+$/
+stages:
+  - test
+  - deploy
+jobs:
+  include:
+    - stage: test
+      node_js: 10
+      script: ./scripts/test.bash
+    - stage: test
+      node_js: 8
+      script: ./scripts/test.bash
+    - stage: test
+      node_js: 6
+      script: ./scripts/test.bash
+    - stage: deploy
+      node_js: 8
+      skip_cleanup: true
+      deploy:
+        provider: npm
+        email: mitmaro@gmail.com
+        skip_cleanup: true
+        api_key:
+          secure: "oAbOPzOhUwqV43YhZf95laNzTc25zf16E6t2wkWMltWj+Zu085gBBcvTuZvzH/TlCczAaUJd9ElYZCAxg9BjgGvN0YwttZY6xW+uhKG443LQ/KJBMYuJk3F4REa5IbGMCOsmfQP+fi1HF7GoX4JELQ3cz6Qvj24yjYfpzkUDHFHGimCQp/Q1WVd8hEXH703JnMIue2ZkIaU3yPLfWYAqImVgAEcfS06vniWDTQn9O0gRfzrKUSjl9B1vZLBGq/++VXVtT0/JUn6giCKU0oMvQeBqFENb5PIBlMi98abMzbbsgoLu66CWSYmWxtA9cVuDfa8e5ktFW+LqEQdWIV4v9BCeV1hFbiW1iJdbJoEhOO81K51q5+wLqUaceUcKJ6l8GbbE/2s92GpKtGDDihlJ/b6cnp9acKvkw6+6GysF8v5s12WeZXIStcvl2X8sRVmaE40DXW5Kf09BCBeDuKUJ9tdDe3wEU4Kt+/OzwF9o4jti/UHTBo6HVBM7l76biwJhEM+HdQscz1AFhf8Ek0ITDdUQJIenJxMNvQvYUMJzQNnhJKpI/IoRpS8/dZqVs3kudezFQUGoBVd/A3knOpcuQFCKdQ5YzXeML8Cheydz4CxAn5E7FerHpaqhVNqedSAaIdsKHivCIcJQrNIszDfvbbxBSmCoG6lzEasjiMVC5i8="
+        on:
+          tags: true
+          repo: MitMaro/eslint-config-mitmaro

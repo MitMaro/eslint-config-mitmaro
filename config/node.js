@@ -1,6 +1,9 @@
 'use strict';
 
 module.exports = {
+	plugins: [
+		'node',
+	],
 	parserOptions: {
 		sourceType: 'script',
 	},
@@ -9,5 +12,6 @@ module.exports = {
 	},
 	extends: [
 		'../rules/node-and-common',
+		'../rules/plugins/node',
 	].map(require.resolve),
 };

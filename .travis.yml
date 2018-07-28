@@ -30,7 +30,7 @@ jobs:
         email: mitmaro@gmail.com
         skip_cleanup: true
         api_key:
-          secure: "oAbOPzOhUwqV43YhZf95laNzTc25zf16E6t2wkWMltWj+Zu085gBBcvTuZvzH/TlCczAaUJd9ElYZCAxg9BjgGvN0YwttZY6xW+uhKG443LQ/KJBMYuJk3F4REa5IbGMCOsmfQP+fi1HF7GoX4JELQ3cz6Qvj24yjYfpzkUDHFHGimCQp/Q1WVd8hEXH703JnMIue2ZkIaU3yPLfWYAqImVgAEcfS06vniWDTQn9O0gRfzrKUSjl9B1vZLBGq/++VXVtT0/JUn6giCKU0oMvQeBqFENb5PIBlMi98abMzbbsgoLu66CWSYmWxtA9cVuDfa8e5ktFW+LqEQdWIV4v9BCeV1hFbiW1iJdbJoEhOO81K51q5+wLqUaceUcKJ6l8GbbE/2s92GpKtGDDihlJ/b6cnp9acKvkw6+6GysF8v5s12WeZXIStcvl2X8sRVmaE40DXW5Kf09BCBeDuKUJ9tdDe3wEU4Kt+/OzwF9o4jti/UHTBo6HVBM7l76biwJhEM+HdQscz1AFhf8Ek0ITDdUQJIenJxMNvQvYUMJzQNnhJKpI/IoRpS8/dZqVs3kudezFQUGoBVd/A3knOpcuQFCKdQ5YzXeML8Cheydz4CxAn5E7FerHpaqhVNqedSAaIdsKHivCIcJQrNIszDfvbbxBSmCoG6lzEasjiMVC5i8="
+          secure: "J9LDRr0sC1SpTu5TWB7tuMIHdVlkycy8vo+iQ4sYyeN1Q72c8utu8JSgxkwztz3g/A2+HdabW60fgwb5ac+wAOuFgMSPSigQhxX44YEMQO5uxvgb79OY6c1BcIg8exhJq3E3GFESR3WWc8b1jppmcMVmPYTAhr+heDymcJ8mNyoBWyy/Q7Pge80eAqcchIyDtq5eh0NwV8TzQ+ObupWroPoasQRuDh1glJ9oM4gyKjpMqASkde5v+lPxsW5HUE8EFaboHMUpEqVfjJc711d8LrYAq/hlcK/7ZNhsJED0jH0M7Zoq3X7+fPBhS/PrHaGgGu9SnWJp4/XMx2xLhjUbRgHLeRKDe6r2/MfFcJNSz7URpyVlMRIdWB7yOCRVTLQGQybEIs/UCmYlV2Vu//hg36soTdxZzH/vftkivSe7jdp3FkW/W/eHGcXR0Qjm2CkQ23Ux5wYh8E+tB8dswdatAmrl/WfB1SiWeeCjKOY/i/xjDAtovtR24u5a4zdGwPxKZVuNKhrynOhlBtjB3+y9TzI409Pa69f1sB/NzK3c8/lPwcmGSOeEF4GmKkGXTMEYjXEdjYEhpyGN2nySzyQag9XZ8r2xx03SfHzSUbnFZx3cP9TEtS47f9eLyreV8CSxgC6enGqBRLG2AjjFIxtzpexbaE8p+Lz9ww1eTzuZlhk="
         on:
           tags: true
           repo: MitMaro/eslint-config-mitmaro

@@ -29,6 +29,14 @@ Adds support for `babel-eslint` and the [ESLint babel plugin][5].
 1. `npm install --save-dev  babel-eslint eslint-plugin-babel`
 1. add `"extends": ["mitmaro", "mitmaro/config/babel"]` to your ESLint config file
 
+### `eslint-config-mitmaro/config/typescript`
+
+Adds support for `typescript-eslint-parser` and the [ESLint Typescript Plugin][eslint-plugin-typescript].
+
+1. Ensure you have installed the dependencies from General Setup
+1. `npm install --save-dev  babel-eslint eslint-plugin-typescript`
+1. add `"extends": ["mitmaro", "mitmaro/config/typescript"]` to your ESLint config file
+
 ### `eslint-config-mitmaro/config/chai`
 
 1. Ensure you have installed the dependencies from General Setup
@@ -61,6 +69,7 @@ Adds support for [mocha][6], disabling certain rules and adding the [ESLint moch
 1. Ensure you have installed the dependencies from General Setup
 1. `npm install --save-dev eslint-plugin-mocha`
 1. add `"extends": "mitmaro/config/mocha"` to your ESLint config file
+1. add `"mitmaro/config/typescript-mocha"` to your ESLint config file to support TypeScript
 
 ### `eslint-config-mitmaro/config/node`
 
@@ -98,6 +107,7 @@ This project is released under the ISC license. See [LICENSE].
 [3]:https://travis-ci.org/MitMaro/eslint-config-mitmaro
 [4]:https://raw.githubusercontent.com/MitMaro/eslint-config-mitmaro/master/LICENSE
 [5]:https://github.com/babel/eslint-plugin-babel
+[eslint-plugin-typescript]:https://github.com/nzakas/eslint-plugin-typescript
 [6]:mochajs.org
 [7]:https://github.com/lo1tuma/eslint-plugin-mocha
 [8]:http://semver.org/

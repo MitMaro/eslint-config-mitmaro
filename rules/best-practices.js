@@ -22,6 +22,7 @@ module.exports = {
 		],
 		eqeqeq: 'error',
 		'guard-for-in': 'off',
+		'max-classes-per-file': 'off',
 		'no-alert': 'error',
 		'no-caller': 'error',
 		'no-case-declarations': 'error',

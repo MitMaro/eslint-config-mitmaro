@@ -62,7 +62,6 @@ module.exports = {
 		'linebreak-style': 'error',
 		'lines-around-comment': 'off',
 		'lines-between-class-members': 'error',
-		'lines-around-directive': 'error',
 		'max-depth': 'error',
 		'max-len': [
 			'error',
@@ -73,6 +72,7 @@ module.exports = {
 			},
 		],
 		'max-lines': 'off',
+		'max-lines-per-function': 'off',
 		'max-nested-callbacks': 'off',
 		'max-params': 'off',
 		'max-statements': 'off',
@@ -81,8 +81,6 @@ module.exports = {
 		'multiline-ternary': 'off',
 		'new-cap': 'error',
 		'new-parens': 'error',
-		'newline-after-var': 'off',
-		'newline-before-return': 'off',
 		'newline-per-chained-call': [
 			'error',
 			{ignoreChainWithDepth: 4},
@@ -148,6 +146,7 @@ module.exports = {
 			{blankLine: 'always', prev: 'directive', next: '*'},
 			{blankLine: 'never', prev: 'directive', next: 'directive'},
 		],
+		'prefer-object-spread': 'error',
 		'quote-props': [
 			'error',
 			'as-needed',

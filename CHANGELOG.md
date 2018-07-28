@@ -3,6 +3,17 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 The format conforms to [Keep a Changelog](http://keepachangelog.com/).
 
+## [4.0.0] - 2018-07-28
+### Added
+- ECMAScript 9 support
+- [TypeScript](https://github.com/nzakas/eslint-plugin-typescript) plugin
+- [Chai Expect](https://github.com/Turbo87/eslint-plugin-chai-expect) plugin
+- [Node](https://github.com/mysticatea/eslint-plugin-node) plugin
+
+### Changed
+- Updated to support ESLint 5
+- Updated plugins to the latest versions
+
 ## [3.0.0] - 2017-12-15
 ### Added
 - ECMAScript 6 support

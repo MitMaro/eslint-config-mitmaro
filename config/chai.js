@@ -1,11 +1,14 @@
 'use strict';
 
 module.exports = {
+	plugins: [
+		'chai-expect',
+	],
 	globals: {
 		expect: true,
 	},
 	extends: [
-		'../rules/plugins/mocha',
+		'../rules/plugins/chai-expect',
 	].map(require.resolve),
 	rules: {
 		// chai uses what appears to be unused expressions

@@ -62,6 +62,13 @@ Adds support for ECMAScript 8 features. This config automatically brings in `esl
 1. Ensure you have installed the dependencies from General Setup
 1. add `"extends": ["mitmaro", "mitmaro/config/ecmascript-8]` to your ESLint config file
 
+### `eslint-config-mitmaro/config/ecmascript-9`
+
+Adds support for ECMAScript 9 features. This config automatically brings in `eslint-config-mitmaro/config/ecmascript-8`.
+
+1. Ensure you have installed the dependencies from General Setup
+1. add `"extends": ["mitmaro", "mitmaro/config/ecmascript-9]` to your ESLint config file
+
 ### `eslint-config-mitmaro/config/mocha`
 
 Adds support for [mocha][6], disabling certain rules and adding the [ESLint mocha plugin][7].

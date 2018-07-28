@@ -23,7 +23,7 @@ The default export contains a set of common ESLint rules, including ECMAScript 6
 
 ### `eslint-config-mitmaro/config/babel`
 
-Adds support for `eslint-babel` and the [ESLint babel plugin][5].
+Adds support for `babel-eslint` and the [ESLint babel plugin][5].
 
 1. Ensure you have installed the dependencies from General Setup
 1. `npm install --save-dev  babel-eslint eslint-plugin-babel`
@@ -67,7 +67,7 @@ Adds support for [mocha][6], disabling certain rules and adding the [ESLint moch
 1. Ensure you have installed the dependencies from General Setup
 1. add `"extends": "mitmaro/config/node"` to your ESLint config file
 
-_Note: You should config after include this after `ecmascript-*` configurations._
+_Note: You should include this after `ecmascript-*` configurations._
 
 ### `eslint-config-mitmaro/config/react`
 

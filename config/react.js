@@ -7,6 +7,12 @@ module.exports = {
 	env: {
 		browser: true,
 	},
+	settings: {
+		react: {
+			createClass: 'createReactClass',
+			pragma: 'React',
+		},
+	},
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,

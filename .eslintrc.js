@@ -1,12 +1,13 @@
-module.exports = {
-	root: true,
-	env: {
-		node: true,
-		es6: true,
+'use strict';
+
+const mitmaroEslintConfig = require('./src/');
+
+module.exports = mitmaroEslintConfig(
+	[
+		'node',
+		'ecmascript-9',
+	],
+	{
+		root: true,
 	},
-	extends: [
-		'./config/common.js',
-		'./config/ecmascript-6.js',
-		'./config/node.js',
-	]
-};
+);

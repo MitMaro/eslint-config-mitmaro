@@ -9,101 +9,153 @@ This package provides MitMaro's shared extensible ESLint config.
 
 ## Usage
 
-There are two ESLint configurations for your usage.
+This project provides an interface for generating ESLint configurations.
+
+```javascript
+// .eslintrc.js
+const eslintConfig = require('eslint-config-mitmaro');
+
+module.exports = eslintConfig(
+	[
+		'node',
+		'ecmascript-9',
+		// other configurations
+	],
+	{
+		root: true,
+		// other base configurations
+	},
+	{
+		// options
+	}
+);
+
+```
 
 ### General Setup
 
-1. `npm install --save-dev eslint-config-mitmaro eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint`
+Install this project and it's base dependencies:
 
-### `eslint-config-mitmaro`
+```
+npm install --save-dev \
+    eslint-config-mitmaro \
+    eslint \
+    eslint-plugin-filenames \
+    eslint-plugin-promise \
+    eslint-plugin-security
+```
 
-The default export contains a set of common ESLint rules, including ECMAScript 6+.
-
-1. add `"extends": "mitmaro"` to your ESLint config file
-
-### `eslint-config-mitmaro/config/babel`
+### Babel configuration
 
 Adds support for `babel-eslint` and the [ESLint babel plugin][5].
 
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev  babel-eslint eslint-plugin-babel`
-1. add `"extends": ["mitmaro", "mitmaro/config/babel"]` to your ESLint config file
+Add `'babel'` to configurations array and install the required dependencies:
 
-### `eslint-config-mitmaro/config/typescript`
+```
+npm install --save-dev babel-eslint eslint-plugin-babel
+```
 
-Adds support for `typescript-eslint-parser` and the [ESLint Typescript Plugin][eslint-plugin-typescript].
+### Typescript configuration
 
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev  babel-eslint eslint-plugin-typescript`
-1. add `"extends": ["mitmaro", "mitmaro/config/typescript"]` to your ESLint config file
+Adds support for `@typescript-eslint/parser` and the [ESLint Typescript Plugin][eslint-plugin-typescript].
 
-### `eslint-config-mitmaro/config/chai`
+Add `'typescript'` to configurations array and install the required dependencies:
 
-1. Ensure you have installed the dependencies from General Setup
-1. add `"extends": "mitmaro/config/chai"` to your ESLint config file
+```
+npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
+```
 
-### `eslint-config-mitmaro/config/ecmascript-6`
+### Chai Expect configuration
 
-Adds support for ECMAScript 6 features and sets the source type to `module`.
+Adds support for the [ESLint Chai Expect Plugin][eslint-plugin-chai-expect].
 
-1. add `"extends": ["mitmaro", "mitmaro/config/ecmascript-6"]` to your ESLint config file
+Add `'chai'` to configurations array and install the required dependencies:
 
-### `eslint-config-mitmaro/config/ecmascript-7`
+```
+npm install --save-dev eslint-plugin-chai-expect
+```
 
-Adds support for ECMAScript 7 features. This config automatically brings in `eslint-config-mitmaro/config/ecmascript-6`.
+### ECMAScript 7 configuration
 
-1. Ensure you have installed the dependencies from General Setup
-1. add `"extends": ["mitmaro", "mitmaro/config/ecmascript-7"]` to your ESLint config file
+Adds support for ECMAScript 7 features.
 
-### `eslint-config-mitmaro/config/ecmascript-8`
+Add `'ecmascript-7'` to configurations array.
 
-Adds support for ECMAScript 8 features. This config automatically brings in `eslint-config-mitmaro/config/ecmascript-7`.
 
-1. Ensure you have installed the dependencies from General Setup
-1. add `"extends": ["mitmaro", "mitmaro/config/ecmascript-8]` to your ESLint config file
+### ECMAScript 8 configuration
 
-### `eslint-config-mitmaro/config/ecmascript-9`
+Adds support for ECMAScript 8 features including previous versions.
 
-Adds support for ECMAScript 9 features. This config automatically brings in `eslint-config-mitmaro/config/ecmascript-8`.
+Add `'ecmascript-8'` to configurations array.
 
-1. Ensure you have installed the dependencies from General Setup
-1. add `"extends": ["mitmaro", "mitmaro/config/ecmascript-9]` to your ESLint config file
+### ECMAScript 9 configuration
 
-### `eslint-config-mitmaro/config/mocha`
+Adds support for ECMAScript 9 features including previous versions.
 
-Adds support for [mocha][6], disabling certain rules and adding the [ESLint mocha plugin][7].
+Add `'ecmascript-9'` to configurations array.
 
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-mocha`
-1. add `"extends": "mitmaro/config/mocha"` to your ESLint config file
-1. add `"mitmaro/config/typescript-mocha"` to your ESLint config file to support TypeScript
+### Mocha configuration
 
-### `eslint-config-mitmaro/config/node`
+Adds support for [mocha][6] and adds the [ESLint mocha plugin][7].
 
-1. Ensure you have installed the dependencies from General Setup
-1. add `"extends": "mitmaro/config/node"` to your ESLint config file
+Add `'mocha'` to configurations array and install the required dependencies:
 
-_Note: You should include this after `ecmascript-*` configurations._
+```
+npm install --save-dev eslint-plugin-mocha
+```
 
-### `eslint-config-mitmaro/config/react`
+### Node.js configuration
 
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-react`
-1. add `"extends": "mitmaro/config/react"` to your ESLint config file
+Adds support for Node.js and adds the [ESLint node plugin][eslint-plugin-node].
+
+Add `'node'` to configurations array and install the required dependencies:
+
+```
+npm install --save-dev eslint-plugin-node
+```
+
+### Console applications configuration
+
+Extends the Node.js configuration to modify rules for console applications.
+
+Add `'console'` to configurations array.
+
+### React configuration
+
+Adds support for React and adds the [ESLint react plugin][eslint-plugin-react].
+
+Add `'react'` to configurations array and install the required dependencies:
+
+```
+npm install --save-dev eslint-plugin-react
+```
+
+#### Options
+
+* `react.version` to set a custom React version. Default to auto-detect.
+
+
+### JSDoc configuration
+
+Adds support for JSDoc and adds the [ESLint jsdoc plugin][eslint-plugin-jsdoc].
+
+Add `'jsdoc'` to configurations array and install the required dependencies:
+
+```
+npm install --save-dev eslint-plugin-jsdoc
+```
+
+#### Options
+
+* `jsdoc.ignorePrivate` - default to `true`.
+* `jsdoc.additionalTagNames` - default to and empty array (`[]`).
+
 
 ## Versioning
 
 This project follows as closely as possible [Semantic Versioning][8]. A MAJOR change would be caused
 by including a rule that could cause a passing code base to fail. A MINOR change is a modification or removal of a rule
 that would not cause existing passing code to fail. A PATCH would be any fix that doesn't cause any changes to rules. 
-
-## Contributing
-
-Add new rule definitions under the files located in `rules` ensuring to keep the rule correctly categorized and in the
-same order as defined on the [ESLint rules][9] page.
-
-This project self-lints and ensure that all file paths are correct. You can run these checks with the `npm run test`
-command.
 
 ## License
 
@@ -115,6 +167,10 @@ This project is released under the ISC license. See [LICENSE].
 [4]:https://raw.githubusercontent.com/MitMaro/eslint-config-mitmaro/master/LICENSE
 [5]:https://github.com/babel/eslint-plugin-babel
 [eslint-plugin-typescript]:https://github.com/nzakas/eslint-plugin-typescript
+[eslint-plugin-chai-expect]:https://github.com/Turbo87/eslint-plugin-chai-expect
+[eslint-plugin-node]:https://github.com/mysticatea/eslint-plugin-node
+[eslint-plugin-react]:https://github.com/yannickcr/eslint-plugin-react
+[eslint-plugin-jsdoc]:https://github.com/gajus/eslint-plugin-jsdoc
 [6]:mochajs.org
 [7]:https://github.com/lo1tuma/eslint-plugin-mocha
 [8]:http://semver.org/

@@ -13,17 +13,11 @@ stages:
   - deploy
 jobs:
   include:
-    - stage: test
-      node_js: 10
-      script: ./scripts/test.bash
-    - stage: test
-      node_js: 8
-      script: ./scripts/test.bash
-    - stage: test
-      node_js: 6
-      script: ./scripts/test.bash
+    - stage: lint
+      node_js: '10'
+      script: npm run test
     - stage: deploy
-      node_js: 8
+      node_js: '10'
       skip_cleanup: true
       deploy:
         provider: npm

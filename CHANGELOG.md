@@ -3,6 +3,18 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 The format conforms to [Keep a Changelog](http://keepachangelog.com/).
 
+## [5.0.0] - 2019-06-16
+### Added
+- Console configuration
+- [JSDoc](https://github.com/gajus/eslint-plugin-jsdoc) plugin
+
+### Changed
+- Drop support for Node < 8.3
+- Drop support for Node 6
+- Functional system to setup configurations
+- Updated to latest rules
+- Updated plugins to the latest versions
+
 ## [4.0.0] - 2018-07-28
 ### Added
 - ECMAScript 9 support

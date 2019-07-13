@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 The format conforms to [Keep a Changelog](http://keepachangelog.com/).
 
+## [5.0.1] - 2019-07-12
+### Fixed
+- React config was not exports
+
 ## [5.0.0] - 2019-06-16
 ### Added
 - Console configuration
@@ -51,4 +55,8 @@ The format conforms to [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - Initial rule set
 
+[5.0.1]: https://github.com/MitMaro/eslint-config-mitmaro/compare/v5.0.0...v5.0.1
+[5.0.0]: https://github.com/MitMaro/eslint-config-mitmaro/compare/v4.0.0...v5.0.0
+[4.0.0]: https://github.com/MitMaro/eslint-config-mitmaro/compare/v3.0.0...v4.0.0
+[3.0.0]: https://github.com/MitMaro/eslint-config-mitmaro/compare/v2.0.0...v3.0.0
 [2.0.0]: https://github.com/MitMaro/eslint-config-mitmaro/compare/v1.0.0...v2.0.0

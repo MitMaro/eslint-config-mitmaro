@@ -11,6 +11,7 @@ const configOrder = [
 	'babel',
 	'console',
 	'node',
+	'react',
 	'ecmascript-9',
 	'ecmascript-8',
 	'ecmascript-7',
@@ -28,8 +29,8 @@ const dependencies = {
 	jsdoc: [],
 	mocha: ['node'],
 	node: [],
+	react: [],
 	typescript: [],
-
 };
 
 module.exports = (configs = [], baseConfig = {}, options = {}) => {

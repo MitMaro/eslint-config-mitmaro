@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-mitmaro",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "mitmaro's personal ESLint configurations",
   "main": "src/index.js",
   "engines": {

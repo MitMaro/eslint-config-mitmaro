@@ -50,7 +50,7 @@ module.exports = (configs = [], baseConfig = {}, options = {}) => {
 		}
 	}
 
-	const resultConfigs = [];
+	const resultConfigs = [baseConfig];
 	for (const configName of configOrder) {
 		if (!configsToLoad.includes(configName)) {
 			continue;
@@ -60,6 +60,5 @@ module.exports = (configs = [], baseConfig = {}, options = {}) => {
 		resultConfigs.push(config(configs, options));
 	}
 
-	resultConfigs.push(baseConfig);
 	return mergeConfigs(resultConfigs);
 };

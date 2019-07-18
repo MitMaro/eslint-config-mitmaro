@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 The format conforms to [Keep a Changelog](http://keepachangelog.com/).
 
+## [5.0.2] - 2019-07-18
+### Fixed
+- Base config would not override rules
+
+
 ## [5.0.1] - 2019-07-12
 ### Fixed
 - React config was not exports

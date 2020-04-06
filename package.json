@@ -1,17 +1,20 @@
 {
   "name": "eslint-config-mitmaro",
-  "version": "5.0.2",
+  "version": "6.0.0",
   "description": "mitmaro's personal ESLint configurations",
   "main": "src/index.js",
+  "bin": {
+    "mitmaro-eslint-setup": "./src/bin/mitmaro-eslint-setup.bash"
+  },
   "engines": {
-    "node": ">= 8.3.0"
+    "node": ">= 10"
   },
   "files": [
     "src"
   ],
   "scripts": {
     "eslint": "eslint .",
-    "test": "eslint ."
+    "test": "./scripts/test.bash"
   },
   "repository": {
     "type": "git",
@@ -21,9 +24,9 @@
     "eslint",
     "eslintconfig"
   ],
-  "author": "Tim Oram <me@mitmaro.ca>",
+  "author": "Tim Oram <dev@mitmaro.ca>",
   "contributors": [
-    "Tim Oram <me@mitmaro.ca>"
+    "Tim Oram <dev@mitmaro.ca>"
   ],
   "license": "ISC",
   "bugs": {
@@ -32,19 +35,20 @@
   "homepage": "https://github.com/mitmaro/eslint-config-mitmaro#readme",
   "devDependencies": {
     "@mitmaro/build-scripts": "^0.1.5",
-    "@typescript-eslint/eslint-plugin": "^1.12.0",
-    "@typescript-eslint/parser": "^1.12.0",
-    "eslint": "^5.16.0",
-    "eslint-find-rules": "^3.3.1",
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-chai-expect": "^2.0.1",
+    "eslint": "^7.4.0",
+    "eslint-find-rules": "^3.5.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-chai-expect": "^2.2.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-filenames": "^1.3.2",
-    "eslint-plugin-jsdoc": "^8.7.0",
-    "eslint-plugin-mocha": "^5.3.0",
-    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-mocha": "^7.0.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.6",
     "eslint-plugin-security": "^1.4.0",
-    "typescript": "^3.5.3"
+    "eslint-plugin-unicorn": "^20.1.0"
   }
 }

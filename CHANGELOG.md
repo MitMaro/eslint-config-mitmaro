@@ -3,6 +3,23 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 The format conforms to [Keep a Changelog](http://keepachangelog.com/).
 
+## [6.0.0] - 2020-04-06
+### Added
+- Support for ECMAScript 2020 (11)
+- [ESLint Comments](https://github.com/mysticatea/eslint-plugin-eslint-comments) plugin
+- [Import](https://github.com/benmosher/eslint-plugin-import) plugin
+- [Unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) plugin
+- [React Hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks) plugin
+- [JSX A11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) plugin
+
+### Removed
+- Configuration for ECMAScript 5 (2015)
+- Configuration for ECMAScript 7 (2016)
+- Configuration for ECMAScript 8 (2017)
+- JSDoc plugin and configuration
+- Typescript plugin and configuration
+
+
 ## [5.0.2] - 2019-07-18
 ### Fixed
 - Base config would not override rules

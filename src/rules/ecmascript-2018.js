@@ -1,7 +1,5 @@
 'use strict';
 
 module.exports = () => ({
-	parserOptions: {
-		ecmaVersion: 9,
-	},
+	'prefer-object-spread': 'error',
 });

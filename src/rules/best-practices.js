@@ -4,7 +4,12 @@ const conditionalRule = require('../lib/conditional-rule');
 
 module.exports = (configs) => ({
 	'accessor-pairs': 'off',
-	'array-callback-return': 'error',
+	'array-callback-return': [
+		'error',
+		{
+			allowImplicit: true,
+		},
+	],
 	'block-scoped-var': 'error',
 	'class-methods-use-this': conditionalRule(configs, 'error', [
 		{
@@ -13,6 +18,7 @@ module.exports = (configs) => ({
 				'error',
 				{
 					exceptMethods: [
+						'componentDidCatch',
 						'componentDidMount',
 						'componentDidUpdate',
 						'componentWillMount',
@@ -30,6 +36,8 @@ module.exports = (configs) => ({
 	'consistent-return': 'error',
 	curly: 'error',
 	'default-case': 'error',
+	'default-case-last': 'error',
+	'default-param-last': 'error',
 	'dot-location': [
 		'error',
 		'property',
@@ -41,11 +49,13 @@ module.exports = (configs) => ({
 		},
 	],
 	eqeqeq: 'error',
+	'grouped-accessor-pairs': 'error',
 	'guard-for-in': 'off',
 	'max-classes-per-file': 'off',
 	'no-alert': 'error',
 	'no-caller': 'error',
 	'no-case-declarations': 'error',
+	'no-constructor-return': 'error',
 	'no-div-regex': 'error',
 	'no-else-return': 'error',
 	'no-empty-function': 'off',
@@ -62,7 +72,7 @@ module.exports = (configs) => ({
 	'no-implicit-globals': 'error',
 	'no-implied-eval': 'error',
 	'no-invalid-this': conditionalRule(configs, 'error', [
-		{configs: ['babel', 'react', 'typescript'], value: 'off'},
+		{configs: ['babel', 'react'], value: 'off'},
 	]),
 	'no-iterator': 'error',
 	'no-labels': [
@@ -82,18 +92,12 @@ module.exports = (configs) => ({
 	'no-new-wrappers': 'error',
 	'no-octal': 'error',
 	'no-octal-escape': 'error',
-	'no-param-reassign': conditionalRule(
-		configs,
-		[
-			'error',
-			{
-				props: false,
-			},
-		],
-		[
-			{configs: ['typescript'], value: 'off'},
-		]
-	),
+	'no-param-reassign': [
+		'error',
+		{
+			props: false,
+		},
+	],
 	'no-proto': 'error',
 	'no-redeclare': 'error',
 	'no-restricted-properties': 'off',
@@ -116,7 +120,7 @@ module.exports = (configs) => ({
 		],
 		[
 			{configs: ['chai'], value: 'off'},
-		]
+		],
 	),
 	'no-unused-labels': 'error',
 	'no-useless-call': 'error',
@@ -129,6 +133,7 @@ module.exports = (configs) => ({
 	'no-with': 'error',
 	'prefer-named-capture-group': 'error',
 	'prefer-promise-reject-errors': 'error',
+	'prefer-regex-literals': 'error',
 	radix: 'error',
 	'require-await': 'off',
 	'require-unicode-regexp': 'error',

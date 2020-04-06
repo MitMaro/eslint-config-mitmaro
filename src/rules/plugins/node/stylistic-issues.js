@@ -1,10 +1,26 @@
 'use strict';
 
-module.exports = () => ({
+// https://github.com/mysticatea/eslint-plugin-node
+
+const conditionalRule = require('../../../lib/conditional-rule');
+
+module.exports = (configs) => ({
+	'node/callback-return': [
+		'error',
+		['callback', 'cb', 'next', 'done'],
+	],
 	'node/exports-style': [
 		'error',
 		'module.exports',
 	],
+	'node/global-require': 'error',
+	'node/no-mixed-requires': 'error',
+	'node/no-process-env': conditionalRule(configs, 'error', [
+		{configs: ['console'], value: 'off'},
+	]),
+	'node/no-restricted-import': 'off',
+	'node/no-restricted-require': 'off',
+	'node/no-sync': 'error',
 	'node/file-extension-in-import': 'error',
 	'node/prefer-global/buffer': 'error',
 	'node/prefer-global/console': 'error',

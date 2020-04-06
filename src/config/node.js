@@ -13,7 +13,8 @@ module.exports = (configs, options) => ({
 		node: true,
 	},
 	rules: {
-		...includeRules('node-and-commonjs', configs, options),
-		...includeRules('plugins/node', configs, options),
+		...includeRules('plugins/node/best-practices', configs, options),
+		...includeRules('plugins/node/possible-errors', configs, options),
+		...includeRules('plugins/node/stylistic-issues', configs, options),
 	},
 });

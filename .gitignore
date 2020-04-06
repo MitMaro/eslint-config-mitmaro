@@ -1,3 +1,4 @@
+build
 node_modules
 eslint-config-mitmaro-*.tgz
 npm-debug.log

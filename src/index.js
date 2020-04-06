@@ -6,15 +6,10 @@ const mergeConfigs = require('./lib/merge-configs');
 const configOrder = [
 	'chai',
 	'mocha',
-	'typescript',
-	'jsdoc',
 	'babel',
 	'console',
 	'node',
 	'react',
-	'ecmascript-9',
-	'ecmascript-8',
-	'ecmascript-7',
 	'common',
 ];
 
@@ -23,14 +18,11 @@ const dependencies = {
 	chai: [],
 	common: [],
 	console: ['node'],
-	'ecmascript-7': [],
-	'ecmascript-8': [],
-	'ecmascript-9': ['ecmascript-8'],
-	jsdoc: [],
+	'ecmascript-2018': [],
+	'ecmascript-2019': ['ecmascript-2018'],
 	mocha: ['node'],
 	node: [],
 	react: [],
-	typescript: [],
 };
 
 module.exports = (configs = [], baseConfig = {}, options = {}) => {
@@ -55,7 +47,7 @@ module.exports = (configs = [], baseConfig = {}, options = {}) => {
 		if (!configsToLoad.includes(configName)) {
 			continue;
 		}
-		// eslint-disable-next-line security/detect-non-literal-require
+		// eslint-disable-next-line security/detect-non-literal-require,node/global-require
 		const config = require(path.resolve(__dirname, 'config', configName));
 		resultConfigs.push(config(configs, options));
 	}

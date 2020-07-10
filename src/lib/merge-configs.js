@@ -75,6 +75,10 @@ module.exports = (configs) => {
 		rules: {},
 	};
 	for (const config of configs) {
+		if (!resultConfig.root && config.root) {
+			resultConfig.root = config.root;
+		}
+
 		if (!resultConfig.parser && config.parser) {
 			resultConfig.parser = config.parser;
 		}

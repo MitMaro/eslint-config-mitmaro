@@ -1,5 +1,7 @@
 'use strict';
 
+// https://github.com/nodesecurity/eslint-plugin-security
+
 const conditionalRule = require('../../lib/conditional-rule');
 
 module.exports = (configs) => ({
@@ -10,7 +12,7 @@ module.exports = (configs) => ({
 	]),
 	'security/detect-disable-mustache-escape': 'error',
 	'security/detect-eval-with-expression': 'error',
-	'security/detect-new-buffer': 'error',
+	'security/detect-new-buffer': 'off', // node/no-buffer-constructor already covers this
 	'security/detect-no-csrf-before-method-override': 'error',
 	'security/detect-non-literal-fs-filename': conditionalRule(configs, 'error', [
 		{configs: ['mocha', 'console'], value: 'off'},

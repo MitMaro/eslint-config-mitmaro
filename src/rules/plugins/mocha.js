@@ -1,5 +1,7 @@
 'use strict';
 
+// https://github.com/lo1tuma/eslint-plugin-mocha
+
 module.exports = () => ({
 	'mocha/handle-done-callback': 'error',
 	'mocha/max-top-level-suites': 'error',
@@ -13,6 +15,7 @@ module.exports = () => ({
 	'mocha/no-nested-tests': 'error',
 	'mocha/no-pending-tests': 'error',
 	'mocha/no-return-and-callback': 'error',
+	'mocha/no-return-from-async': 'error',
 	'mocha/no-setup-in-describe': 'off',
 	'mocha/no-sibling-hooks': 'error',
 	'mocha/no-skipped-tests': 'error',

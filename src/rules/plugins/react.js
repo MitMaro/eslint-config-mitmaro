@@ -1,5 +1,7 @@
 'use strict';
 
+// https://github.com/yannickcr/eslint-plugin-react
+
 module.exports = () => ({
 	'react/boolean-prop-naming': 'error',
 	'react/button-has-type': 'error',
@@ -10,8 +12,21 @@ module.exports = () => ({
 	'react/forbid-dom-props': 'off',
 	'react/forbid-elements': 'off',
 	'react/forbid-foreign-prop-types': 'off',
-	'react/forbid-prop-types': 'off',
+	'react/forbid-prop-types': [
+		'error',
+		{
+			forbid: ['object', 'array'],
+		},
+	],
+	'react/function-component-definition': [
+		'error',
+		{
+			namedComponents: 'function-declaration',
+			unnamedComponents: 'arrow-function',
+		},
+	],
 	'react/no-access-state-in-setstate': 'error',
+	'react/no-adjacent-inline-elements': 'error',
 	'react/no-array-index-key': 'error',
 	'react/no-children-prop': 'error',
 	'react/no-danger': 'error',
@@ -56,11 +71,14 @@ module.exports = () => ({
 	'react/sort-prop-object': 'off',
 	'react/style-prop-object': 'error',
 	'react/void-dom-elements-no-children': 'error',
+
 	// JSX-specific rules
 	'react/jsx-boolean-value': 'error',
 	'react/jsx-child-element-spacing': 'error',
 	'react/jsx-closing-bracket-location': 'error',
 	'react/jsx-closing-tag-location': 'error',
+	'react/jsx-curly-brace-presence': 'error',
+	'react/jsx-curly-newline': 'error',
 	'react/jsx-curly-spacing': 'error',
 	'react/jsx-equals-spacing': 'error',
 	'react/jsx-filename-extension': 'off',
@@ -84,10 +102,11 @@ module.exports = () => ({
 	'react/jsx-no-comment-textnodes': 'error',
 	'react/jsx-no-duplicate-props': 'error',
 	'react/jsx-no-literals': 'off',
+	'react/jsx-no-script-url': 'error',
 	'react/jsx-no-target-blank': 'error',
 	'react/jsx-no-undef': 'error',
+	'react/jsx-no-useless-fragment': 'error',
 	'react/jsx-one-expression-per-line': 'off',
-	'react/jsx-curly-brace-presence': 'error',
 	'react/jsx-fragments': 'error',
 	'react/jsx-pascal-case': 'error',
 	'react/jsx-props-no-multi-spaces': 'error',

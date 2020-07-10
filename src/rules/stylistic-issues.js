@@ -33,28 +33,22 @@ module.exports = (configs) => ({
 		'self',
 	],
 	'eol-last': 'error',
-	'func-call-spacing': conditionalRule(configs, 'error', [
-		{configs: ['typescript'], value: 'off'},
-	]),
+	'func-call-spacing': 'error',
 	'func-name-matching': 'off',
 	'func-names': 'off',
 	'func-style': 'off',
+	'function-call-argument-newline': 'off',
 	'function-paren-newline': 'off',
 	'id-blacklist': 'off',
+	'id-denylist': 'off',
 	'id-length': 'off',
 	'id-match': 'off',
 	'implicit-arrow-linebreak': 'error',
-	indent: conditionalRule(
-		configs,
-		[
-			'error',
-			'tab',
-			{SwitchCase: 1},
-		],
-		[
-			{configs: ['typescript'], value: 'off'},
-		],
-	),
+	indent: [
+		'error',
+		'tab',
+		{SwitchCase: 1},
+	],
 	'jsx-quotes': [
 		'error',
 		'prefer-double',
@@ -70,9 +64,7 @@ module.exports = (configs) => ({
 	'line-comment-position': 'off',
 	'linebreak-style': 'error',
 	'lines-around-comment': 'off',
-	'lines-between-class-members': conditionalRule(configs, 'error', [
-		{configs: ['typescript'], value: 'off'},
-	]),
+	'lines-between-class-members': 'error',
 	'max-depth': 'error',
 	'max-len': [
 		'error',
@@ -118,7 +110,7 @@ module.exports = (configs) => ({
 		},
 	],
 	'no-negated-condition': 'error',
-	'no-nested-ternary': 'error',
+	'no-nested-ternary': 'off', // use unicorn/no-nested-ternary instead
 	'no-new-object': 'error',
 	'no-plusplus': 'off',
 	'no-restricted-syntax': 'off',
@@ -161,6 +153,7 @@ module.exports = (configs) => ({
 		{blankLine: 'always', prev: 'directive', next: '*'},
 		{blankLine: 'never', prev: 'directive', next: 'directive'},
 	],
+	'prefer-exponentiation-operator': 'error',
 	'prefer-object-spread': 'error',
 	'quote-props': [
 		'error',
@@ -173,9 +166,7 @@ module.exports = (configs) => ({
 			avoidEscape: true,
 		},
 	],
-	semi: conditionalRule(configs, 'error', [
-		{configs: ['babel', 'typescript'], value: 'off'},
-	]),
+	semi: 'error',
 	'semi-spacing': 'error',
 	'semi-style': 'error',
 	'sort-keys': 'off',

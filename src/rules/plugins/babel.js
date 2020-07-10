@@ -1,5 +1,7 @@
 'use strict';
 
+// https://github.com/babel/eslint-plugin-babel
+
 module.exports = () => ({
 	'babel/new-cap': 'error',
 	'babel/camelcase': 'error',

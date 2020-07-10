@@ -1,5 +1,7 @@
 'use strict';
 
+// https://github.com/xjamundx/eslint-plugin-promise
+
 module.exports = () => ({
 	'promise/always-return': 'error',
 	'promise/avoid-new': 'off',
